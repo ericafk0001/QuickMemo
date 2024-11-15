@@ -1,4 +1,4 @@
-# QuickMemo
+# QuickMemo ⚡
 
 A responsive web app to quickly record audio from your microphone and download it as a .webm file. Made using only HTML, CSS, & Javascript.
 
