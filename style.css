@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #1f1f1f;
+  --button-color: rgb(202, 0, 0);
+  --text-color: white;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: "Inter", serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+  margin-top: 6vh;
+}
+
+.mic-toggle {
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border-radius: 50%;
+  border-style: none;
+  width: 256px;
+  height: 256px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: rgb(10, 10, 10) 0 0 20px;
+  transition: all 0.25s;
+  position: relative; /* Keep this relative to position the ::before element correctly */
+}
+
+.mic-toggle:hover {
+  background: rgba(255, 255, 255, 1);
+  color: rgb(158, 158, 158);
+}
+
+.mic-toggle:active {
+  opacity: 0.1;
+  transform: scale(0.9);
+}
+
+.mic-toggle::before {
+  content: "";
+  position: absolute;
+  top: 0; /* Align to top-left corner of the parent */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: inherit;
+  z-index: -1;
+}
+
+.listening {
+  background-color: #a80b0b;
+}
+
+.listening::before {
+  animation: listening 1.2s infinite;
+}
+
+@keyframes listening {
+  from {
+    opacity: 0.25;
+  }
+  to {
+    transform: scale(2); /* Scale animation */
+    opacity: 0; /* Fade out */
+  }
+}
+
+#download-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 26px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 32em;
+  padding: 10px 3vw;
+  background-color: #111111;
+  transition: all 0.15s;
+}
+
+#download-link:hover {
+  opacity: 0.7;
+}
+
+span {
+  text-shadow: rgb(173, 173, 173) 1px 0 10px;
+}
+
+h1 {
+  color: var(--text-color);
+  margin-top: 2vh;
+}
+
+li {
+  color: var(--text-color);
+  font-size: 16px;
+  padding: 0 20px;
+}
+
+ol {
+  padding-bottom: 20px;
+}

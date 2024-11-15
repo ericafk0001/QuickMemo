@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickMemo</title>
+    <link rel="icon" href="microphone-solid.svg" type="image/svg+xml" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <button class="mic-toggle" id="mic">
+        <i class="fa fa-microphone" style="font-size: 128px"></i>
+      </button>
+      <audio class="playback" controls></audio>
+      <a id="download-link" href="#">Download Recording</a>
+      <h1>How to use <span>QuickMemo</span></h1>
+      <ol>
+        <li>Click the red button to start recording</li>
+        <li>Click it again to stop recording</li>
+        <li>Use the media controls to playback your audio</li>
+        <li>Click "Download Recording" to download your recording</li>
+        <li>You can click the red button again to record a new file.</li>
+      </ol>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
